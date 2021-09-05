@@ -1,9 +1,9 @@
 
 # Transaction API
 - Transaction Service runs on the port 8090
-  `` http://localhost:8090``
 - Actuator health indicator
-    ``http://localhost:8090/rest-transfer-service/actuator/health``
+    http://localhost:8090/rest-transfer-service/actuator/health
+  
 ## Prerequisites
 
 What things you need to install the software and how to install them
@@ -16,16 +16,17 @@ What things you need to install the software and how to install them
 ```
 ### H2- In Memory Database Scripts
 
-   Runs on start of the service
-    '''
-    /src/main/resources folder
-    - schema.sql
-    - data.sql
-    '''
+   - Runs on start of the service
+   
+    - Database console url: 
+      http://localhost:8090/rest-transfer-service/h2-console
+   
+    - /src/main/resources folder
+      - schema.sql
+      - data.sql
     
-    ``Database console url:``
-        ``http://localhost:8090/rest-transfer-service/h2-console``
-    
+  
+      
 ## Start the spring boot service from root folder of the project
   - mvn clean package
   - java -jar target/rest-transfer-service-0.0.1-SNAPSHOT.jar
@@ -36,29 +37,34 @@ What things you need to install the software and how to install them
 
 ## API
    Method:
+   
    POST:
-        - http://localhost:8090/rest-transaction-service/transfer
-   GET:
+        - http://localhost:8090/rest-transaction-service/transfer \
+   GET
         - http://localhost:8090/rest-transaction-service/account/{accountNumber}
   
+  
 ## Swagger 
-    '''
-      - /src/main/resources/swagger folder 
-      - Import or copy it in
-        https://editor.swagger.io/
-    '''
 
-## Diagnostics
+  Copy file "rest-transfer-service-swagger.yml" from
+  
+  * /src/main/resources/swagger/rest-transfer-service-swagger.yml 
+      
+   * Import or copy it in :  https://editor.swagger.io/
+   
+
+## Diagnostics 
 
 1. Check for jdk version as it requires JDK 8
       - <terminal>> java -version
+2. Run mvn clean package
 
        
 ## Contributing
 
  - Suhail Mir
   
- ## References
+## References
   - https://start.spring.io/
 
  
