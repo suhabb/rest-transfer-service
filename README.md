@@ -46,7 +46,7 @@ What things you need to install the software
   
 ## Swagger 
 
-  Copy file "rest-transfer-service-swagger.yml" from
+  Copy file "rest_transfer_service_swagger.yaml" from
   
   * /src/main/resources/swagger/rest-transfer-service-swagger.yml 
       
